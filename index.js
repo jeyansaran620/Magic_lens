@@ -33,8 +33,9 @@ app.post('/find-image', (req, res) => {
   upload(req, res, async function (err) {
     // check for error
     if (err || req.file === undefined) {
-      console.log(err)
-      res.send("error occured")
+      console.log(err);
+      res.status(400);
+      res.send("Some error occured")
     } else {
       let form = new FormData();
 
