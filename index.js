@@ -11,7 +11,7 @@ const { getImageDataFromResults } = require('./utils');
 const app = express();
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'uploads/');
+    cb(null, '/tmp');
   },
 
   // By default, multer removes file extensions so let's add them back
@@ -28,6 +28,7 @@ app.use(bodyParser.json());
 
 app.use(express.static('./public'));
 app.use('/uploads', express.static('./uploads'))
+app.use('/tmp', express.static('/tmp'))
 
 app.post('/find-image', (req, res) => {
   upload(req, res, async function (err) {
