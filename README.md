@@ -1,6 +1,6 @@
 # Magic lens
     As the name suggests the app is gonna fetch the unknown data of the valuable surroundings of our eco-system.
-With the help of Tamil Literature, we are planning to generate awareness with our website.
+    With the help of Tamil Literature, we are planning to generate awareness with our website.
 
 ## usage:
     People who wants to know about a plant/tree can upload a picture of it, to know more about it.
@@ -16,4 +16,4 @@ With the help of Tamil Literature, we are planning to generate awareness with ou
     Extending the reference as much as we can could help people a lot.
     Margining the Medicinal values of a plant would extend the projects value.
 
-### [Link to the Live Site:](maayakannadi.herokuapp.com)
+### [Link to the Live Site](maayakannadi.herokuapp.com)
