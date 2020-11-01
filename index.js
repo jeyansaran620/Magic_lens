@@ -57,6 +57,7 @@ app.post('/find-image', (req, res) => {
         );
 
         if (status === 200 && data) {
+          console.log(data.results)
           const response = getImageDataFromResults(data.results);
           res.send({ filePath: req.file.path, data: response });
         } else {

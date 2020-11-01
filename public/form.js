@@ -1,5 +1,5 @@
 function setErrorText(text) {
-  document.getElementById("unsuccessful").innerHTML = text || 'மன்னிக்கவும், ஏதோ பிழை நேர்ந்து விட்டது. மீண்டும் முயலவும்';
+  document.getElementById("unsuccessful").innerHTML = text || 'மன்னிக்கவும், ஏதோ பிழை நேர்ந்து விட்டது!!! மீண்டும் முயற்ச்சிக்கவும்...';
 }
 
 function clearErrorText() {
@@ -14,6 +14,7 @@ function getLitRefString(array) {
 }
 
 function clearResults() {
+  document.getElementById("results").style.display = "none";
   document.getElementById("inputImage").src = '';
   document.getElementById('englishName').innerHTML = '';
   document.getElementById('scientificName').innerHTML = '';
@@ -35,6 +36,7 @@ document.getElementById('form').onsubmit = function (event) {
 
       if (this.status === 200) {
         var responseText = JSON.parse(this.responseText);
+        document.getElementById("results").style.display = "block";
         document.getElementById("inputImage").src = responseText.filePath;
         if ('fullyMatched' in responseText.data) {
           document.getElementById('englishName').innerHTML = `<b>ஆங்கிலப் பெயர்:</b> ${(responseText.data.commonNames && responseText.data.commonNames.join(', ')) || 'தெரியவில்லை'}`;
@@ -53,8 +55,8 @@ document.getElementById('form').onsubmit = function (event) {
       }
     } else {
       clearErrorText();
-      clearResults();
-      document.getElementById("loading").innerHTML = 'தேடல் நடைபெறுகிறது. சிறிது நேரம் பொறுக்கவும்...';
+      clearResults();64446444644444644444
+      document.getElementById("loading").innerHTML = 'தேடல் நடைபெறுகிறது. சிறிது நேரம் காத்திருக்கவும்...';
     }
   }
 
